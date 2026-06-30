@@ -10,6 +10,7 @@ class Solution {
 
         for (String part : parts) {
             if (part.isEmpty() || part.equals(".")) {
+                //noinspection UnnecessaryContinue
                 continue;
             } else if (part.equals("..")) {
                 if (!stack.isEmpty()) {
