@@ -1,0 +1,17 @@
+package KthLargestElementInAnArray;
+
+import java.util.PriorityQueue;
+
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int num : nums) {
+            pq.offer(num);
+            if (pq.size() > k) {
+                pq.poll();
+            }
+        }
+        //noinspection DataFlowIssue
+        return pq.peek();
+    }
+}
