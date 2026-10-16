@@ -1,0 +1,28 @@
+package CountGoodNodesInBinaryTree;
+
+public class Main {
+    public static void main(String[] args) {
+        /*
+                 3
+                / \
+               1   4
+              /   / \
+             3   1   5
+        */
+
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(4);
+
+        root.left.left = new TreeNode(3);
+
+        root.right.left = new TreeNode(1);
+        root.right.right = new TreeNode(5);
+
+        Solution solution = new Solution();
+
+        int result = solution.goodNodes(root);
+
+        System.out.println(result);
+    }
+}
