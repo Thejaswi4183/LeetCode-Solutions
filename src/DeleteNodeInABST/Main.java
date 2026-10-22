@@ -55,8 +55,7 @@ public class Main {
             queue.offer(node.right);
         }
 
-        while (!result.isEmpty()
-                && result.get(result.size() - 1).equals("null")) {
+        while (!result.isEmpty() && result.get(result.size() - 1).equals("null")) {
             result.remove(result.size() - 1);
         }
 
